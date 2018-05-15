@@ -1,3 +1,5 @@
+library(tfruns)
+library(dplyr)
 
 # Combinations: 1,259712
 # Desired runs: 64
@@ -27,3 +29,33 @@ tfruns::tuning_run(
     mini_batch_size = c(16, 32, 64)
   )
 )
+
+runs <- ls_runs() %>% 
+  as_tibble()
+runs
+runs %>% View()
+runs
+
+runs <- ls_runs(order = "eval_acc") %>% 
+  as_tibble()
+runs
+
+ls_runs(order = "eval_acc") %>%
+  head(2) %>%
+  tfruns::compare_runs()
+
+
+runs[1, ] %>% view_run()
+runs[2, ] %>% view_run()
+
+
+runs %>% View()
+
+ls_runs(order = "eval_acc") %>% 
+  as_tibble() %>% 
+  tail()
+
+
+ls_runs(order = "eval_acc") %>% 
+  head(2) %>% 
+  tfruns::compare_runs()

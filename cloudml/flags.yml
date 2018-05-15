@@ -1,0 +1,2 @@
+cloudml:
+  data_dir: "gs://tensorflow-cloud-demo/walking-data"

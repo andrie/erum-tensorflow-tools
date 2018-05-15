@@ -1,0 +1,16 @@
+{
+  "conv_1_filters": 64,
+  "conv_1_kernel": 8,
+  "conv_1_pooling": 2,
+  "conv_1_dropout": 0,
+  "conv_2_filters": 32,
+  "conv_2_kernel": 32,
+  "conv_2_pooling": 6,
+  "conv_2_dropout": 0.5,
+  "dense_1_nodes": 256,
+  "dense_1_dropout": 0.5,
+  "dense_2_nodes": 256,
+  "dense_2_dropout": 0,
+  "mini_batch_size": 32,
+  "data_dir": "gs://tensorflow-cloud-demo/walking-data"
+}

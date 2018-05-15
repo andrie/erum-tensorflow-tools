@@ -14,7 +14,7 @@ model <- keras_model_sequential() %>%
   ) %>%
   layer_max_pooling_1d(pool_size = 2) %>%
   layer_conv_1d(
-    filters = 64,
+    filters = 32,
     kernel_size = 10,
     activation = "relu"
     ) %>%

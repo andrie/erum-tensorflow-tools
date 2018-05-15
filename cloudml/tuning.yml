@@ -1,0 +1,51 @@
+trainingInput:
+  hyperparameters:
+    goal: MAXIMIZE
+    hyperparameterMetricTag: val_acc
+    maxTrials: 25
+    max_parallel_trials: 3
+    params:
+      - parameterName: conv_1_filters
+        type: DISCRETE
+        discreteValues: [16, 32, 64, 128]
+      - parameterName: conv_1_pooling
+        type: DISCRETE
+        discreteValues: [2, 4, 6]
+      - parameterName: conv_1_kernel
+        type: DISCRETE
+        discreteValues: [4, 8, 16, 24, 32]
+      - parameterName: conv_1_dropout
+        type: DISCRETE
+        discreteValues: [0, 0.1, 0.2, 0.5]
+        
+      - parameterName: conv_2_filters
+        type: DISCRETE
+        discreteValues: [16, 32, 64, 128]
+      - parameterName: conv_2_pooling
+        type: DISCRETE
+        discreteValues: [2, 4, 6]
+      - parameterName: conv_2_kernel
+        type: DISCRETE
+        discreteValues: [4, 8, 16, 24, 32]
+      - parameterName: conv_2_dropout
+        type: DISCRETE
+        discreteValues: [0, 0.1, 0.2, 0.5]
+        
+      - parameterName: dense_1_nodes
+        type: DISCRETE
+        discreteValues: [32, 64, 128, 256]
+      - parameterName: dense_1_dropout
+        type: DISCRETE
+        discreteValues: [0, 0.1, 0.2, 0.5]
+
+      - parameterName: dense_2_nodes
+        type: DISCRETE
+        discreteValues: [32, 64, 128, 256]
+      - parameterName: dense_2_dropout
+        type: DISCRETE
+        discreteValues: [0, 0.1, 0.2, 0.5]
+        
+      - parameterName: data_dir
+        type: CATEGORICAL
+        categoricalValues: ["gs://tensorflow-cloud-demo/walking-data"]
+      
